@@ -1,6 +1,12 @@
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+// import { SessionProvider } from "next-auth/react";
+// import app from "./App";
+// import App from "next/app";
+import Sepp from "./Sepp";
+import Navbar from "./components/Navbar";
+// import Sepp from "./Sepp";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +28,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Navbar/>
+<Sepp>{children}</Sepp>
+
+
+         
+
       </body>
     </html>
   );

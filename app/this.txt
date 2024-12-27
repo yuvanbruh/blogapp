@@ -1,0 +1,46 @@
+app/
+├── layout.js              <-- Main layout file (wraps entire app, global structure)
+├── page.js                <-- Entry page for app (home, or index page)
+├── login/                 <-- Folder for login-related pages
+│   ├── page.js            <-- Main login page (options to sign in or sign up)
+│   ├── signIn.js          <-- Sign-In form (existing user login)
+│   ├── signUp.js          <-- Sign-Up form (new user registration)
+│   └── forgotPassword.js  <-- Forgot Password page (for resetting password)
+├── dashboard/             <-- Folder for the dashboard (after login)
+│   ├── page.js            <-- Main dashboard page (user’s homepage after login)
+│   ├── settings.js        <-- User settings page (account settings, preferences)
+│   └── profile.js         <-- User profile page (personal information, picture, etc.)
+├── components/            <-- Reusable UI components
+│   ├── Header.js          <-- Header component (includes navigation links)
+│   ├── Footer.js          <-- Footer component (includes terms, privacy, etc.)
+│   ├── Sidebar.js         <-- Sidebar component (for navigation inside dashboard)
+│   └── Modal.js           <-- Modal component (for alerts, dialogs, etc.)
+├── api/                   <-- Folder for API routes
+│   ├── auth/              <-- Authentication-related API routes
+│   │   ├── route.js       <-- NextAuth or custom authentication route
+│   │   ├── signIn.js      <-- Sign-In API route
+│   │   ├── signUp.js      <-- Sign-Up API route
+│   │   └── forgotPassword.js <-- Forgot password API route
+│   ├── user/              <-- User-related API routes
+│   │   ├── getUser.js     <-- Fetch user data API
+│   │   ├── updateUser.js  <-- Update user profile data API
+│   │   └── deleteUser.js  <-- Delete user API
+│   ├── posts/             <-- Posts-related API routes (if your app has content/posts)
+│   │   ├── createPost.js  <-- Create a new post
+│   │   ├── getPosts.js    <-- Fetch all posts
+│   │   └── deletePost.js  <-- Delete a post
+│   └── products/          <-- Products-related API routes (for e-commerce)
+│       ├── createProduct.js <-- Create a new product
+│       ├── getProducts.js  <-- Fetch product list
+│       └── updateProduct.js <-- Update product details
+├── lib/                   <-- Utility functions and integrations
+│   ├── mongodb.js         <-- MongoDB client and connection logic (clientPromise)
+│   ├── mail.js            <-- Mail sending logic (SMTP for sending emails, e.g., for password reset)
+│   └── stripe.js          <-- Stripe integration for payments (if applicable)
+└── styles/                <-- Global styles
+    ├── globals.css        <-- Global CSS styles (font, layout, colors)
+    ├── tailwind.css       <-- Tailwind configuration and utilities
+    └── components/        <-- Component-specific styles
+        ├── header.css     <-- Styles specific to the Header component
+        ├── footer.css     <-- Styles specific to the Footer component
+        └── sidebar.css    <-- Styles specific to the Sidebar component
